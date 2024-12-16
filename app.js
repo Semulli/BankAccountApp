@@ -78,11 +78,18 @@ const withdrawBtnEl = document.querySelector("#withDrawBtn");
 
 infoBtnEl.onclick = () => bankApp.personalInfo();
 depositBtnEl.onclick = () => {
+  document.querySelector("#table").classList.remove("bg-danger");
+
+  document.querySelector("#table").classList.add("bg-success");
   const depositAmount = Number(depositEl.value);
   bankApp.deposit(depositAmount);
   depositEl.value = "";
 };
 withdrawBtnEl.onclick = () => {
+  document.querySelector("#table").classList.remove("bg-success");
+
+  document.querySelector("#table").classList.add("bg-danger");
+
   const withDrawAmount = Number(withdrawEl.value);
   bankApp.withdraw(withDrawAmount);
   withdrawEl.value = "";
