@@ -1,0 +1,9 @@
+.app-name {
+  font-size: 60px;
+  background: linear-gradient(0deg, #f1e9eb, #f82b2b, #d1d1d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.process-Table {
+}

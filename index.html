@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>$eZa Bank</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link
+      rel="icon"
+      href="./DALL·E 2024-12-15 22.27.15 - A bold and innovative logo design for 'SeZa Bank'. The logo features a combination of abstract geometric shapes forming a modernized letter 'S', symbo.webp"
+      type="image/png"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark">
+    <main class="container">
+      <div class="row">
+        <h1 class="text-light text-center mt-5 app-name">$eza Bank</h1>
+        <p class="lead text-light text-center">WELCOME TO YOUR BANK ACCOUNT!</p>
+        <p class="lead text-light text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+          reiciendis laudantium fugiat consequuntur neque dolores, odio aliquid
+          aliquam autem rem nihil voluptatem incidunt, ratione quaerat
+          cupiditate sequi repellat reprehenderit accusamus? Molestias
+          distinctio, pariatur minima maiores dignissimos tempora! Nihil vero
+          ducimus nesciunt, delectus, ipsam quisquam repellendus fuga
+          accusantium tenetur assumenda officiis in quasi eligendi sunt
+          praesentium voluptates earum minus soluta, molestias aliquid at
+          facilis rerum. Aliquid et natus nisi qui accusamus?
+        </p>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-6 mt-5">
+          <input
+            type="text"
+            class="form-control mt-5"
+            id="fullNameEl"
+            placeholder="Enter your fullname"
+            aria-describedby="addon-wrapping"
+          />
+          <input
+            type="email"
+            class="form-control mt-4"
+            id="emailEl"
+            placeholder="Enter your email address"
+            aria-describedby="addon-wrapping"
+          />
+          <button
+            type="submit"
+            id="personInfoBtn"
+            class="btn-danger mt-4 w-100"
+          >
+            OK
+          </button>
+
+          <div class="input-group mt-4">
+            <span class="input-group-text">Enter your amount:</span>
+            <input
+              type="number"
+              class="form-control col-md-6"
+              id="EnteringValue"
+              placeholder="Enter amount"
+              aria-describedby="addon-wrapping"
+            />
+          </div>
+
+          <button type="submit" id="depositBtn" class="btn-danger mt-4 w-100">
+            OK
+          </button>
+
+          <div class="input-group mt-4">
+            <span class="input-group-text">Withdraw amount:</span>
+            <input
+              type="number"
+              class="form-control col-md-6"
+              id="withDrawValue"
+              placeholder="Withdraw amount"
+              aria-describedby="addon-wrapping"
+            />
+          </div>
+          <button type="submit" id="withDrawBtn" class="btn-danger mt-4 w-100">
+            OK
+          </button>
+        </div>
+
+        <div class="col-md-6 mt-5">
+          <div class="card w-50 mx-auto mt-4">
+            <img
+              src="https://www.w3schools.com/w3css/img_avatar3.png"
+              alt="User avatar"
+            />
+            <div class="card-body text-center">
+              <p class="card-text" id="fulname">Your fullname</p>
+              <p class="card-text" id="email">Your email</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <h1 class="text-light">Your balance: <span id="balance">0 ₼</span></h1>
+      </div>
+      <table class="table text-light mt-5 mb-5 process-Table" id="table">
+        <thead class="bg-danger">
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Process Type</th>
+            <th scope="col">Amount</th>
+            <th scope="col">TransactionHistory</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
