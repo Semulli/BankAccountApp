@@ -22,7 +22,7 @@ const bankApp = {
       this.transactions.push({
         no: this.transactions.length + 1,
         processType: "DepositAmount",
-        amount: amount,
+        amount: "+" + amount,
         balance: this.balance,
       });
 
@@ -38,7 +38,7 @@ const bankApp = {
       this.transactions.push({
         no: this.transactions.length + 1,
         processType: "WithdrawBalance",
-        amount: amount,
+        amount: "-" + amount,
         balance: this.balance,
       });
       this.updateTransactionHistory();
@@ -51,14 +51,19 @@ const bankApp = {
 
   updateTransactionHistory: function () {
     const showValue = document.querySelector("#balance");
-    showValue.innerHTML = this.balance;
+    showValue.innerHTML = this.balance + "₼";
 
     const showTable = document.querySelector("#table tbody");
 
     showTable.innerHTML = this.transactions
       .map((transaction) => {
+        const currentRow =
+          transaction.processType === "DepositAmount"
+            ? "style='background-color:rgb(0, 174, 72); color:rgb(255, 255, 255);'"
+            : "style='background-color:rgb(255, 50, 50); color:rgb(255, 255, 255);'";
+
         return `
-          <tr>
+          <tr ${currentRow}>
             <td>${transaction.no}</td>
             <td>${transaction.processType}</td>
             <td>${transaction.amount}</td>
@@ -78,19 +83,14 @@ const withdrawBtnEl = document.querySelector("#withDrawBtn");
 
 infoBtnEl.onclick = () => bankApp.personalInfo();
 depositBtnEl.onclick = () => {
-  document.querySelector("#table").classList.remove("bg-danger");
-
-  document.querySelector("#table").classList.add("bg-success");
   const depositAmount = Number(depositEl.value);
   bankApp.deposit(depositAmount);
+
   depositEl.value = "";
 };
 withdrawBtnEl.onclick = () => {
-  document.querySelector("#table").classList.remove("bg-success");
-
-  document.querySelector("#table").classList.add("bg-danger");
-
   const withDrawAmount = Number(withdrawEl.value);
   bankApp.withdraw(withDrawAmount);
+
   withdrawEl.value = "";
 };

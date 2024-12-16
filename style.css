@@ -10,3 +10,13 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+/* 
+#table tbody tr:nth-child(odd) {
+  background-color: #00911b;
+  color: #ffffff;
+}
+
+#table tbody tr:nth-child(even) {
+  background-color: #f51111;
+  color: #ffffff;
+} */
